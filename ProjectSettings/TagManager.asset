@@ -15,6 +15,7 @@ TagManager:
   - 2X
   - SpeedUp
   - SnakeSeg
+  - Snake'Seg
   layers:
   - Default
   - TransparentFX

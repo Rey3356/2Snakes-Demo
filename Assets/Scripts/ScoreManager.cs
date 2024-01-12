@@ -7,6 +7,10 @@ public class ScoreManager : MonoBehaviour
 {
     [SerializeField] public TextMeshProUGUI Score1;
     [SerializeField] public TextMeshProUGUI Score2;
+
+    [SerializeField] public int P1Score;
+    [SerializeField] public int P2Score;
+
     public bool stop;
 
     private void Start()
@@ -17,16 +21,20 @@ public class ScoreManager : MonoBehaviour
 
     public void setScore(int id, int score)
     {
-        if (id == 1 ) 
+        if (!stop)
         {
-            Score1.text = score.ToString();
-        }
-        
-        else if(id == 2)
-        {
-            Score2.text = score.ToString();
+            if (id == 1)
+            {
+                P1Score = score;
+                Score1.text = score.ToString();
+            }
+
+            else if (id == 2)
+            {
+                P2Score = score;
+                Score2.text = score.ToString();
+            }
         }
     }
-
 
 }

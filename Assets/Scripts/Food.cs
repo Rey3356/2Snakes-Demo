@@ -13,7 +13,7 @@ public class Food : MonoBehaviour
     IEnumerator SelfDestruct()
     {
         yield return new WaitForSecondsRealtime(5);
-        Destroy(gameObject);
+        Destroy(gameObject);      
     }
 
     private void OnTriggerEnter2D(Collider2D other)

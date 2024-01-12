@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4600494635364989355}
   m_Layer: 0
   m_Name: Snake'Segment
-  m_TagString: SnakeSeg
+  m_TagString: Snake'Seg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

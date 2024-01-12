@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7910109261331119042}
   m_Layer: 0
   m_Name: Snake'
-  m_TagString: Snake
+  m_TagString: Snake'
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,25 +264,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e881e9c483abe46b54af23b586a713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnakeAlive: 0
-  GameEnded: 0
   SnakeID: 2
   SnakeScore: 0
-  ScoreM: {fileID: 0}
-  Shield: 0
-  speed: 15
+  SnakeLost: 0
+  SnakeSpeed: 15
   speedMultiplier: 1
-  segmantPrefab: {fileID: 1958014663872117384, guid: e78e4dfc9efc7644d9f77532a31faa7b, type: 3}
-  BufferSegmentSpawnPoint: {x: 0, y: 0}
   screenBounds: {fileID: 0}
-  InputClip: {fileID: -5785191804023321576}
-  SnakePowerClip: {fileID: 0}
-  Aclips:
+  segmantPrefab: {fileID: 1958014663872117384, guid: e78e4dfc9efc7644d9f77532a31faa7b, type: 3}
+  SpeedUp: 0
+  Shield: 0
+  twoX: 0
+  BasicClip: {fileID: -5785191804023321576}
+  BasicClips:
   - {fileID: 8300000, guid: 5573a8e1a1a17114ea917594daf6f8c9, type: 3}
   - {fileID: 8300000, guid: 6f3e8431ba9d93a44a4f44ada46c0e8e, type: 3}
   - {fileID: 8300000, guid: 9ec16329159b7f94fb59aa0ed3dd6870, type: 3}
   - {fileID: 8300000, guid: ee7b50ef1999c614eb2e434b1d3d85d3, type: 3}
-  Pclips:
+  PowerUpClip: {fileID: 0}
+  PowerUpClips:
   - {fileID: 8300000, guid: cbf8cdc97ef75c04596ebbb2eac0b44c, type: 3}
   - {fileID: 8300000, guid: d45b1006d87ce7046867d8ce88cb69bb, type: 3}
   - {fileID: 8300000, guid: be4b4c8d970e910429294b81a519e762, type: 3}
+  GameEndedOnSnake: 0
