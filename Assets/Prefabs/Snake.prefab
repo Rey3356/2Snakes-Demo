@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1958014663872117386}
   - component: {fileID: -6375526091369894310}
   - component: {fileID: 4600494635364989355}
+  - component: {fileID: -5785191804023321576}
   - component: {fileID: 7910109261331119042}
   m_Layer: 0
   m_Name: Snake
@@ -155,6 +156,102 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
+--- !u!82 &-5785191804023321576
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958014663872117387}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5573a8e1a1a17114ea917594daf6f8c9, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.6
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &7910109261331119042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,3 +264,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e881e9c483abe46b54af23b586a713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SnakeAlive: 0
+  GameEnded: 0
+  SnakeID: 1
+  SnakeScore: 0
+  ScoreM: {fileID: 0}
+  Shield: 0
+  speed: 15
+  speedMultiplier: 1
+  segmantPrefab: {fileID: 5259222364597863450, guid: b766653792159d84faf3b501cc2daf4e, type: 3}
+  BufferSegmentSpawnPoint: {x: 0, y: 0}
+  screenBounds: {fileID: 0}
+  InputClip: {fileID: -5785191804023321576}
+  SnakePowerClip: {fileID: 0}
+  Aclips:
+  - {fileID: 8300000, guid: 5573a8e1a1a17114ea917594daf6f8c9, type: 3}
+  - {fileID: 8300000, guid: 6f3e8431ba9d93a44a4f44ada46c0e8e, type: 3}
+  - {fileID: 8300000, guid: 9ec16329159b7f94fb59aa0ed3dd6870, type: 3}
+  - {fileID: 8300000, guid: ee7b50ef1999c614eb2e434b1d3d85d3, type: 3}
+  Pclips:
+  - {fileID: 8300000, guid: cbf8cdc97ef75c04596ebbb2eac0b44c, type: 3}
+  - {fileID: 8300000, guid: d45b1006d87ce7046867d8ce88cb69bb, type: 3}
+  - {fileID: 8300000, guid: be4b4c8d970e910429294b81a519e762, type: 3}

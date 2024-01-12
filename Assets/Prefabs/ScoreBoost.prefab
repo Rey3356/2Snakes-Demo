@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5886402040322763470}
   - component: {fileID: 6131109760186932834}
   - component: {fileID: 1424944280991192100}
+  - component: {fileID: 1981405691499758157}
   m_Layer: 0
   m_Name: ScoreBoost
-  m_TagString: Untagged
+  m_TagString: 2X
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6184766406584177205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.254, y: -1.729, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -132,3 +133,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.76135874, y: 0.5725833}
   m_EdgeRadius: 0
+--- !u!114 &1981405691499758157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6184766406584177205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f163549a3476b74495fd4e280316a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

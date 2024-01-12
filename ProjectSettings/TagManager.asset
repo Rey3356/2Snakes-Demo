@@ -7,6 +7,14 @@ TagManager:
   - Snake
   - GainFood
   - LossFood
+  - ScreenWrapCollider
+  - SpawnGridArea
+  - Snake'
+  - ScoreManager
+  - Shield
+  - 2X
+  - SpeedUp
+  - SnakeSeg
   layers:
   - Default
   - TransparentFX
