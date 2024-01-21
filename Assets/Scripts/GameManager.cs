@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Device;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -19,10 +20,12 @@ public class GameManager : MonoBehaviour
     bool gameEnded;
 
     [SerializeField] private GameObject GOScreen;
+    [SerializeField] private GameObject PauseScreen;
 
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1.0f;
         gameEnded = false;
         GOScreen.SetActive(false);
     }
@@ -50,21 +53,63 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                gameEnded = true;
-                ScoreM.stop = true;
-                ItemsM.stop = true;
-                UpdateScoresOnScreen(P1Score);
-                StartCoroutine(GameEnder());
+                if (Snakes[0].GameEndedOnSnake)
+                {
+                    gameEnded = true;
+                    ScoreM.stop = true;
+                    ItemsM.stop = true;
+                    UpdateScoresOnScreen(P1Score);
+                    StartCoroutine(GameEnder());
+
+                }
+                
+            }
+
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                if(PauseScreen.activeSelf == true)
+                {    
+                    ActivatePauseScreen(0);
+                }
+                else
+                {
+                    ActivatePauseScreen(1);
+                }
+
             }
             
         }
     }
 
-    public void Reloader()
+    public void ActivatePauseScreen(int a)
     {
-        SfxManager.clip = ButtonSfx;
-        SfxManager.Play();
+        if(a == 0)
+        {
+            Time.timeScale = 1.0f;
+            PauseScreen.SetActive(false);
+        }
+        if (a == 1)
+        {
+            Time.timeScale = 0.0f;
+            PauseScreen.SetActive(true);
+        }
+
+    }
+
+    public void Reloader()
+    {     
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+    }
+
+    public void Levelloader(int BI)
+    {
+        SceneManager.LoadSceneAsync(BI);
+    }
+
+
+    public void AppQuitter()
+    {
+        UnityEngine.Application.Quit();
     }
 
     private void UpdateScoresOnScreen(TextMeshProUGUI s1)
@@ -78,18 +123,22 @@ public class GameManager : MonoBehaviour
         s2.text = ScoreM.P2Score.ToString();
     }
 
+
     private void DecideWinner()
     {
         if(ScoreM.P1Score > ScoreM.P2Score)
         {
+            Winner.color = new Color(57f, 255f, 20f, 255f);
             Winner.text = "Player 1 Wins!";
         }
         else if(ScoreM.P1Score < ScoreM.P2Score)
         {
+            Winner.color = new Color(255f, 0f, 0f, 255f);
             Winner.text = "Player 2 Wins!";
         }
         else
         {
+            Winner.color = new Color(0f, 0f, 255f, 255f);
             Winner.text = "It's a Tie!";
         }
     }
